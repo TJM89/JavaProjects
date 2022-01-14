@@ -30,9 +30,7 @@ public class QuestionFourPassword
 
 			System.out.println("Incorrect User id or password. Try again");
 
-		else
-
-			System.out.println("Maximum attempts reached. Account locked!");
+		
 
 		// second try
 
