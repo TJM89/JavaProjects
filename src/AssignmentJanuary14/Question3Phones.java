@@ -26,12 +26,16 @@ public class Question3Phones {
 				System.out.println("Product selected is " + samsungPhones[i]);
 				break;
 
-			} else if (googlePhones[i].equals(phoneName)) {
+			} 
+			
+			for(int i=0;i<googlePhones.length;i++)
+			if (googlePhones[i].equals(phoneName)) {
 				System.out.println("Product selected is " + googlePhones[i]);
 				break;
 			}
 
-			else if (iPhones[i].equals(phoneName)) {
+			for(int i=0;i<iPhones.length;i++)
+			if (iPhones[i].equals(phoneName)) {
 				System.out.println("Product selected is " + iPhones[i]);
 				break;
 			}
