@@ -7,7 +7,6 @@ public class EmployeeMain {
 	public static void main(String[] args) {
 
 		double noOfHoursWorked = 0.0;
-		double hourlyRatenew = 0.0;
 
 		EmployeeData firstNameobj = new EmployeeData();
 		EmployeeData lastNameobj = new EmployeeData();
