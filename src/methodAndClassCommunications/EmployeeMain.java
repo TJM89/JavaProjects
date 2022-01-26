@@ -15,9 +15,11 @@ public class EmployeeMain {
 		String firstName = "";
 		firstName = firstNameobj.getfirstName();
 		System.out.println("Employee first name is " + firstName);
+		
 		String lastName = "";
 		lastName = lastNameobj.getlastName();
 		System.out.println("Employee last name is " + lastName);
+		
 		double hourlyRate = 0;
 		hourlyRate = hourlyRateobj.hourlyRate();
 		System.out.println("Hourly pay rate of " + firstName.concat(lastName) + " is $" + hourlyRate);

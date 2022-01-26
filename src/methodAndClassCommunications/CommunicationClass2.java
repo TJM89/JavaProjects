@@ -8,6 +8,5 @@ public class CommunicationClass2 {
 	
 	System.out.println(cities);
 	}
-	
-	
+		
 }
