@@ -16,6 +16,7 @@ public class ProductDetails {
 
 		System.out.println(laptopDescription);
 	}
+
 	void laptopDescription2() {
 
 		System.out.println(laptopDescription2);
