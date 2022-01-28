@@ -6,7 +6,13 @@ public class ProductStorage {
 		
 		ProductDetails laptopobj = new ProductDetails();
 		
-		laptopobj.laptopDetails();
+		laptopobj.laptopName();
+		laptopobj.laptopDescription();
+		laptopobj.laptopDescription2();
+		laptopobj.laptopPrice();
+		
+		
+		
 
 	}
 
