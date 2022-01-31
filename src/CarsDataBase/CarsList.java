@@ -15,9 +15,8 @@ public class CarsList {
 		this.carName = carName;
 	}
 
-	// using the method to call the car Number in CarsMain class
 	CarsList(int carNum) {
-		carNumber = carNum;
+		this.carNumber = carNum;
 	}
 
 }

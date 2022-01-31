@@ -13,8 +13,6 @@ public class CarsMain {
 		CarsList obj2 = new CarsList("Honda-CRV");
 		System.out.println("Car name is " + obj2.carName);
 
-		// using a method to call car number
-
 		CarsList obj3 = new CarsList(369);
 		System.out.println("Car number is " + obj3.carNumber);
 
