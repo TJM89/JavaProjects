@@ -79,10 +79,17 @@ public class BanquetDetails {
 
 	public void calculateTheTotalCost(double baseCost, double tax, double cessAmount) {
 		double totalCost = baseCost + tax + cessAmount;
+		System.out.println("");
+		System.out.println("Your personalized cost details are as follows:");
+		System.out.println("______________________________________________");
+		System.out.println("");
 		System.out.println("The base cost excluding tax and cess will be : $" + baseCost);
 		System.out.println("You will be charged $ " + tax + " extra for tax and $ " + cessAmount + " extra for Cess.");
 		System.out
 				.println("The total cost for booking the Banquet hall including Tax and Cess charges is $" + totalCost);
+		System.out.println("");
+		System.out.println("______________________________________________");
+		System.out.println("***We look forward to serving you***");
 	}
 
 }
