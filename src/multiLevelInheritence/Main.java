@@ -9,8 +9,6 @@ public class Main {
 		chickenPieces.ChickenPiecescut(10);
 		ChickenCurry chickenCurry = new ChickenCurry();
 		chickenCurry.ChickenCurryMade("");
-		
-		
 
 	}
 

@@ -6,7 +6,5 @@ public class ChickenCurry extends ChickenPieces {
 		System.out.println("Marinate the chicken and cook the chicken for 45 minutes");
 		System.out.println("Curry is ready");
 	}
-	
-	
-	
+
 }
