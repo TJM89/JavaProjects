@@ -3,13 +3,13 @@ package visaCardAssignment;
 public class VisaParent {
 	String emailID = "james@gmail.com";
 	String cardNumber;
-	int pin;
+	String pin;
 
-	int getPin() {
+	String getPin() {
 		return pin;
 	}
 
-	void setPin(int pin) {
+	void setPin(String pin) {
 		this.pin = pin;
 	}
 

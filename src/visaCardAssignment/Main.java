@@ -17,10 +17,10 @@ public class Main {
 
 		String cardOne = "Debit";
 		String cardTwo = "Credit";
-		int num1 = 600;
-		int num2 = 150;
-		int num3 = 1500;
-		int num4 = 1000;
+		int num1 = 100;
+		int num2 = 100;
+		int num3 = 1000;
+		int num4 = 3000;
 		int sum = (num1 + num2 + num3 + num4);
 
 		System.out.println("***Welcome to Walmart online self checkout service***");
@@ -55,10 +55,11 @@ public class Main {
 			VisaDebit visaDebit = new VisaDebit(sum, "james@gmail.com", "418188559966");
 			System.out.println("You have selected Visa Debit");
 			System.out.println("Please enter the pin number to proceed : ");
-			visaDebit.setPin(sc.nextInt());
+			visaDebit.setPin(sc.next());
 
 			if (visaDebit.isCardValid()) {
-				double discountedAmount = visaDebit.visaDiscount(sum);
+				System.out.println("**Visa Debit card holders get additional 1% discount on the total bill amount**");
+				double discountedAmount = visaDebit.specialDebitDiscount();
 				visaDebit.dCardBalance(discountedAmount);
 			}
 
@@ -72,7 +73,7 @@ public class Main {
 			VisaCredit visaCredit = new VisaCredit(sum, "james@gmail.com", "518145225181");
 			System.out.println("You have selected Visa Credit");
 			System.out.println("Please enter the pin number to proceed: ");
-			visaCredit.setPin(sc.nextInt());
+			visaCredit.setPin(sc.next());
 
 			if (visaCredit.isCardValid()) {
 				double discountedAmount = visaCredit.visaDiscount(sum);

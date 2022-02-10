@@ -5,6 +5,7 @@ public class VisaDebit extends VisaParent {
 	// Assuming $4000 is the bank balance
 
 	int debitCardBalance = 4000;
+
 	private double billAmount;
 
 	VisaDebit(double bill, String emailID, String cardNumber) {
@@ -23,10 +24,16 @@ public class VisaDebit extends VisaParent {
 	}
 
 	public boolean isCardValid() {
-		if (this.cardValidation() && this.getCardNumber().equals("418188559966") && this.getPin() == 2022) {
+		if (this.cardValidation() && this.getCardNumber().equals("418188559966") && this.getPin().equals("2022")) {
 			return true;
 		}
 		return false;
+	}
+
+	public double specialDebitDiscount() {
+		double specialDebitDiscount = this.visaDiscount(this.getBillAmount()) + (this.getBillAmount() * 0.01);
+		return specialDebitDiscount;
+
 	}
 
 	public void dCardBalance(double billAmountMain) {
