@@ -12,7 +12,6 @@ public class VisaDebit extends VisaParent {
 		this.setCardNumber(cardNumber);
 		this.billAmount = bill;
 		this.setEmailID(emailID);
-
 	}
 
 	double getBillAmount() {
@@ -24,7 +23,7 @@ public class VisaDebit extends VisaParent {
 	}
 
 	public boolean isCardValid() {
-		if (this.cardValidation() && this.getCardNumber().equals("418188559966") && this.getPin().equals("2022")) {
+		if (this.getCardNumber().equals("418188559966") && this.getPin().equals("2022")) {
 			return true;
 		}
 		return false;

@@ -30,12 +30,8 @@ public class VisaParent {
 
 	}
 
-	public boolean cardValidation() {
-		if (this.getCardNumber().length() == 12)
-			return true;
-		return false;
+	
 
-	}
 
 	public double visaDiscount(double billAmount) {
 		double discountAmount = billAmount - (billAmount * 0.05);

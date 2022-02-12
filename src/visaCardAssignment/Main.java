@@ -17,10 +17,10 @@ public class Main {
 
 		String cardOne = "Debit";
 		String cardTwo = "Credit";
-		int num1 = 100;
+		int num1 = 500;
 		int num2 = 100;
-		int num3 = 1000;
-		int num4 = 3000;
+		int num3 = 100;
+		int num4 = 1000;
 		int sum = (num1 + num2 + num3 + num4);
 
 		System.out.println("***Welcome to Walmart online self checkout service***");

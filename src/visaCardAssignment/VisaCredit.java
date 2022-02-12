@@ -23,7 +23,7 @@ public class VisaCredit extends VisaParent {
 	}
 
 	public boolean isCardValid() {
-		if (this.cardValidation() && this.getCardNumber().equals("518145225181") && this.getPin().equals("1989")) {
+		if (this.getCardNumber().equals("518145225181") && this.getPin().equals("1989")) {
 			return true;
 		}
 		return false;
