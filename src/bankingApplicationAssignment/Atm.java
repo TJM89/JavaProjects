@@ -23,7 +23,7 @@ public class Atm extends BankingRules implements StandardProcess {
 	public double withdraw(double withdrawAmount, double balance) {
 		System.out.println("**Loading.... please wait**");
 
-		if (balance >= withdrawAmount && dailyWithdrawalLimit() >=1) {
+		if (balance >= withdrawAmount && dailyWithdrawalLimit() >= withdrawAmount) {
 			balance = balance - withdrawAmount;
 			System.out.println("\nPlease collect your cash and collect the card\n");
 			System.out.println("\nBalance Amount in your Account is $ " + balance);

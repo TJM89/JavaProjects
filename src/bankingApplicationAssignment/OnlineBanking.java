@@ -26,15 +26,6 @@ public class OnlineBanking extends BankingRules implements StandardProcess {
 
 	@Override
 	public double withdraw(double withdrawAmount, double balance) {
-		System.out.println("Withdrawing Amount : $ " + withdrawAmount);
-		if (balance >= withdrawAmount) {
-			balance = balance - withdrawAmount;
-			System.out.println("$" + withdrawAmount + " has been successfully withdrawn from your account ");
-			System.out.println("Balance Amount in your Account is $ " + balance);
-		} else {
-			System.out.println("\nSorry! Insufficient Funds");
-			System.out.println();
-		}
 		return balance;
 	}
 

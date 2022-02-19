@@ -5,7 +5,7 @@ public class Person {
 	private String name;
 	private double totalFundAvail;
 	private String accountType;
-	private String currentPin = "1989";
+	private String currentPin;
 
 	String getCurrentPin() {
 		return currentPin;

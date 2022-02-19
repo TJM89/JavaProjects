@@ -6,7 +6,7 @@ public class BankingMainClass {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		Person person = new Person("5236523689658965", "Thomas", 1000, "Chequing Account");
+		Person person = new Person("5236523689658965", "Thomas", 2000, "Chequing Account");
 		int counter = 0;
 
 		System.out.println("Enter the type of service you would like to perform?");
@@ -81,8 +81,7 @@ public class BankingMainClass {
 			boolean validUser = false;
 			int opt = 1;
 			OnlineBanking obanking = new OnlineBanking();
-			
-			
+
 			while (!validPin && !validUser) {
 				System.out.print("Enter the User Name : ");
 				String userName = sc.next();
@@ -97,7 +96,7 @@ public class BankingMainClass {
 						System.out.println("1. Fund Transfer");
 						System.out.println("2. Investment");
 						System.out.println("3. Check Balance");
-						
+
 						System.out.print("Choose the operation you would like to perform :");
 						int option = sc.nextInt();
 						switch (option) {
@@ -105,15 +104,28 @@ public class BankingMainClass {
 							System.out.print("Enter the account number to transfer the amount :");
 							long accountNo = sc.nextLong();
 							System.out.print("Enter the amount to transfer :");
-							double balance = obanking.fundTransfer(sc.nextDouble(), person.getTotalFundAvail(), accountNo);
+							double balance = obanking.fundTransfer(sc.nextDouble(), person.getTotalFundAvail(),
+									accountNo);
 							person.setTotalFundAvail(balance);
 							break;
 						}
 						case 2: {
-
 							System.out.println("Please select your investment option:\n ");
-							System.out.println("RRSP\nTFSA\nBonds\n");
-							obanking.Investment(sc.next(), option);
+							System.out.println("1.RRSP\n2.TFSA\n3.Bonds\n");
+							String type;
+							int optionUse = sc.nextInt();
+							if (optionUse == 1) {
+								type = "RRSP";
+							} else if (optionUse == 2) {
+								type = "TFSA";
+							} else if (optionUse == 3) {
+								type = "Bonds";
+							} else {
+								System.out.println("Please select a valid investment option.");
+								break;
+							}
+
+							obanking.Investment(type, person.getTotalFundAvail());
 
 							break;
 						}
