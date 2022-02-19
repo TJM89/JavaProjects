@@ -45,16 +45,18 @@ public class OnlineBanking extends BankingRules implements StandardProcess {
 	}
 
 	@Override
-	public void Investment(String plan) {
-		System.out.println("You have opted for investment plan : " + plan);
-
+	public void Investment(String plan, double balance) {
+		System.out.println("Your selected investment option is " + plan);
+		System.out.println("You have $" + balance + "in your account for making an Investment ");
+		System.out.println("Please call our Financial Advisor on +1 888-915-5660 for further details");
+		
 	}
 
 	@Override
 	void userIdentification() {
 		// TODO Auto-generated method stub
 		
-		//need to work on this
+	
 
 	}
 

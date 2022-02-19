@@ -37,12 +37,11 @@ public class Atm extends BankingRules implements StandardProcess {
 	@Override
 	void userIdentification() {
 		// TODO Auto-generated method stub
-		
-		// need to work on this
+			
 	}
 
 	@Override
-	public void Investment(String plan) {
+	public void Investment(String plan, double balance) {
 		// TODO Auto-generated method stub
 
 	}

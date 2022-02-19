@@ -8,5 +8,5 @@ public interface StandardProcess {
 
 	public double fundTransfer(double amount, double balance, long accountNo);
 
-	public void Investment(String plan);
+	public void Investment(String plan, double balance);
 }

@@ -108,8 +108,8 @@ public class BankingMainClass {
 						case 2: {
 
 							System.out.println("Please select your investment option: ");
-							System.out.println("RRSP\nTFSA");
-							ob.Investment(sc.next());
+							System.out.println("RRSP\nTFSA\nBonds");
+							ob.Investment(sc.next(), option);
 
 							break;
 						}
