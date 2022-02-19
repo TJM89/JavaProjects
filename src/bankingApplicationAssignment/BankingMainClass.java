@@ -32,14 +32,17 @@ public class BankingMainClass {
 						switch (option) {
 						case 1: {
 							System.out.print("Enter the amount to withdraw :");
-							double balance = atm.withdraw(sc.nextDouble(), person.getTotalFundAvail());
-							person.setTotalFundAvail(balance);
+							double withdrawnAmount = atm.withdraw(sc.nextDouble(), person.getTotalFundAvail());
+							person.setTotalFundAvail(withdrawnAmount);
 							break;
 						}
 						case 2: {
 							System.out.print("Enter the amount to deposit :");
-							double balance = atm.deposit(sc.nextDouble(), person.getTotalFundAvail());
-							person.setTotalFundAvail(balance);
+
+							double depositNew = sc.nextDouble();
+
+							double balanceUpdate = atm.deposit(depositNew, person.getTotalFundAvail());
+							person.setTotalFundAvail(balanceUpdate);
 							break;
 						}
 						case 3: {
@@ -104,9 +107,10 @@ public class BankingMainClass {
 							System.out.print("Enter the account number to transfer the amount :");
 							long accountNo = sc.nextLong();
 							System.out.print("Enter the amount to transfer :");
-							double balance = obanking.fundTransfer(sc.nextDouble(), person.getTotalFundAvail(),
+							double transferAmount = sc.nextDouble();
+							double balanceCalled = obanking.fundTransfer(transferAmount, person.getTotalFundAvail(),
 									accountNo);
-							person.setTotalFundAvail(balance);
+							person.setTotalFundAvail(balanceCalled);
 							break;
 						}
 						case 2: {

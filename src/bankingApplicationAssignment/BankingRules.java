@@ -3,7 +3,6 @@ package bankingApplicationAssignment;
 public abstract class BankingRules {
 
 	abstract boolean userIdentification(String userName);
-		
 
 	public int noOfTransactionAllowed() {
 		return 5;

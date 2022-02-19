@@ -19,17 +19,6 @@ public class OnlineBanking extends BankingRules implements StandardProcess {
 	}
 
 	@Override
-	public double deposit(double depositAmount, double balance) {
-		return balance;
-
-	}
-
-	@Override
-	public double withdraw(double withdrawAmount, double balance) {
-		return balance;
-	}
-
-	@Override
 	public double fundTransfer(double transferAmount, double balance, long accountNo) {
 		if (balance >= transferAmount) {
 			balance = balance - transferAmount;
@@ -52,4 +41,15 @@ public class OnlineBanking extends BankingRules implements StandardProcess {
 
 	}
 
+// below are both methods of the interface - StandardProcess
+	@Override
+	public double deposit(double depositAmount, double balance) {
+		return balance;
+
+	}
+
+	@Override
+	public double withdraw(double withdrawAmount, double balance) {
+		return balance;
+	}
 }

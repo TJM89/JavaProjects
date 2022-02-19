@@ -13,10 +13,10 @@ public class Atm extends BankingRules implements StandardProcess {
 	public double deposit(double depositAmount, double balance) {
 		System.out.println("**Loading.... please wait**");
 
-		balance = balance + depositAmount;
+		double newBalance = balance + depositAmount;
 		System.out.println("\nYour Money has been successfully deposited\n");
 		System.out.println("\nBalance Amount in your Account is $ " + balance);
-		return balance;
+		return newBalance;
 	}
 
 	@Override
@@ -34,12 +34,10 @@ public class Atm extends BankingRules implements StandardProcess {
 		return balance;
 	}
 
-	
-
 	@Override
 	public void Investment(String plan, double balance) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
