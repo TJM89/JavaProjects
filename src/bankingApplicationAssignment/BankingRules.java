@@ -9,7 +9,7 @@ public abstract class BankingRules {
 	}
 
 	public double dailyWithdrawalLimit() {
-		return 250;
+		return 1000;
 	}
 
 	public void pinChange() {

@@ -6,7 +6,7 @@ public class BankingMainClass {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		Person person = new Person("5236523689658965", "Thomas", 1000, "Chequing Account");
+		Person person = new Person("5236523689658965", "Thomas", 1500, "Chequing Account");
 		int counter = 0;
 
 		System.out.println("Enter the type of service you would like to perform?");
