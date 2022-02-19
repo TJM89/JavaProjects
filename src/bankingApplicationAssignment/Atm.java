@@ -23,7 +23,7 @@ public class Atm extends BankingRules implements StandardProcess {
 	public double withdraw(double withdrawAmount, double balance) {
 		System.out.println("**Loading.... please wait**");
 
-		if (balance >= withdrawAmount && dailyWithdrawalLimit() >=1000) {
+		if (balance >= withdrawAmount && dailyWithdrawalLimit() >=1) {
 			balance = balance - withdrawAmount;
 			System.out.println("\nPlease collect your cash and collect the card\n");
 			System.out.println("\nBalance Amount in your Account is $ " + balance);
@@ -34,22 +34,24 @@ public class Atm extends BankingRules implements StandardProcess {
 		return balance;
 	}
 
-	@Override
-	void userIdentification() {
-		// TODO Auto-generated method stub
-
-	}
+	
 
 	@Override
 	public void Investment(String plan, double balance) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
 	public double fundTransfer(double amount, double balance, long accountNo) {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	boolean userIdentification(String userName) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

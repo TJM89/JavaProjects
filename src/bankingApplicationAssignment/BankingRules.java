@@ -2,14 +2,15 @@ package bankingApplicationAssignment;
 
 public abstract class BankingRules {
 
-	abstract void userIdentification();
+	abstract boolean userIdentification(String userName);
+		
 
 	public int noOfTransactionAllowed() {
 		return 5;
 	}
 
 	public double dailyWithdrawalLimit() {
-		return 1000;
+		return 100;
 	}
 
 	public void pinChange() {

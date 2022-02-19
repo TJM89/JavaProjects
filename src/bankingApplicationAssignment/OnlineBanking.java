@@ -2,16 +2,19 @@ package bankingApplicationAssignment;
 
 public class OnlineBanking extends BankingRules implements StandardProcess {
 
-	public Boolean validatePassword(String password, String userName) {
-		if (password.equals("unlockme") && userName.equals("Thomas")) {
+	public Boolean validatePassword(String password) {
+		if (password.equals("unlockme")) {
 			return true;
 		} else
 			return false;
 	}
 
 	@Override
-	void userIdentification() {
-		// TODO Auto-generated method stub
+	public boolean userIdentification(String userName) {
+		if (userName.equals("Thomas")) {
+			return true;
+		} else
+			return false;
 
 	}
 

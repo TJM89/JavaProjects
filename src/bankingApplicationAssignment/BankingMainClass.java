@@ -6,7 +6,7 @@ public class BankingMainClass {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		Person person = new Person("5236523689658965", "Thomas", 1500, "Chequing Account");
+		Person person = new Person("5236523689658965", "Thomas", 1000, "Chequing Account");
 		int counter = 0;
 
 		System.out.println("Enter the type of service you would like to perform?");
@@ -80,7 +80,7 @@ public class BankingMainClass {
 			boolean validPin = false;
 			boolean validUser = false;
 			int opt = 1;
-			OnlineBanking ob = new OnlineBanking();
+			OnlineBanking obanking = new OnlineBanking();
 			
 			
 			while (!validPin && !validUser) {
@@ -88,8 +88,8 @@ public class BankingMainClass {
 				String userName = sc.next();
 				System.out.print("Enter the password : ");
 				String password = sc.next();
-				validPin = ob.validatePassword(password, userName);
-				validUser = ob.validatePassword(password, userName);
+				validPin = obanking.validatePassword(password);
+				validUser = obanking.userIdentification(userName);
 				if (validPin && validUser) {
 					while (opt == 1) {
 						System.out.println("\n**Welcome to your online banking " + userName + "**");
@@ -105,7 +105,7 @@ public class BankingMainClass {
 							System.out.print("Enter the account number to transfer the amount :");
 							long accountNo = sc.nextLong();
 							System.out.print("Enter the amount to transfer :");
-							double balance = ob.fundTransfer(sc.nextDouble(), person.getTotalFundAvail(), accountNo);
+							double balance = obanking.fundTransfer(sc.nextDouble(), person.getTotalFundAvail(), accountNo);
 							person.setTotalFundAvail(balance);
 							break;
 						}
@@ -113,7 +113,7 @@ public class BankingMainClass {
 
 							System.out.println("Please select your investment option:\n ");
 							System.out.println("RRSP\nTFSA\nBonds\n");
-							ob.Investment(sc.next(), option);
+							obanking.Investment(sc.next(), option);
 
 							break;
 						}
