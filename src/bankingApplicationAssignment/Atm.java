@@ -12,7 +12,7 @@ public class Atm extends BankingRules implements StandardProcess {
 	@Override
 	public double deposit(double depositAmount, double balance) {
 		System.out.println("**Deposit in progress, please wait**");
-		System.out.println("Depositing Amount : " + depositAmount);
+
 		balance = balance + depositAmount;
 		System.out.println("\nYour Money has been successfully deposited\n");
 		System.out.println("\nBalance Amount in your Account is $ " + balance);
@@ -22,7 +22,7 @@ public class Atm extends BankingRules implements StandardProcess {
 	@Override
 	public double withdraw(double withdrawAmount, double balance) {
 		System.out.println("**Transaction in progress, please wait**");
-		System.out.println("Withdrawing Amount : $ " + withdrawAmount);
+
 		if (balance >= withdrawAmount) {
 			balance = balance - withdrawAmount;
 			System.out.println("\nPlease collect your cash and collect the card\n");
@@ -37,7 +37,7 @@ public class Atm extends BankingRules implements StandardProcess {
 	@Override
 	void userIdentification() {
 		// TODO Auto-generated method stub
-			
+
 	}
 
 	@Override

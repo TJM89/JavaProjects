@@ -78,22 +78,26 @@ public class BankingMainClass {
 			}
 		} else if (selectionType == 2) {
 			boolean validPin = false;
+			boolean validUser = false;
 			int opt = 1;
 			OnlineBanking ob = new OnlineBanking();
-			System.out.print("Enter the User Name : ");
-			String userName = sc.next();
-			while (!validPin) {
+			
+			
+			while (!validPin && !validUser) {
+				System.out.print("Enter the User Name : ");
+				String userName = sc.next();
 				System.out.print("Enter the password : ");
 				String password = sc.next();
-				validPin = ob.validatePassword(password);
-				if (validPin) {
+				validPin = ob.validatePassword(password, userName);
+				validUser = ob.validatePassword(password, userName);
+				if (validPin && validUser) {
 					while (opt == 1) {
 						System.out.println("\n**Welcome to your online banking " + userName + "**");
 						System.out.println("Please choose from one of the following options :");
 						System.out.println("1. Fund Transfer");
 						System.out.println("2. Investment");
 						System.out.println("3. Check Balance");
-						System.out.println("4. Logout");
+						
 						System.out.print("Choose the operation you would like to perform :");
 						int option = sc.nextInt();
 						switch (option) {
@@ -107,8 +111,8 @@ public class BankingMainClass {
 						}
 						case 2: {
 
-							System.out.println("Please select your investment option: ");
-							System.out.println("RRSP\nTFSA\nBonds");
+							System.out.println("Please select your investment option:\n ");
+							System.out.println("RRSP\nTFSA\nBonds\n");
 							ob.Investment(sc.next(), option);
 
 							break;
@@ -128,7 +132,7 @@ public class BankingMainClass {
 					}
 					break;
 				}
-				System.out.print("Invalid Password! ");
+				System.out.print("Invalid Credentials! ");
 				counter = counter + 1;
 				if (counter >= 3) {
 					System.out.println("Maxium attempts reached, Account Locked!");

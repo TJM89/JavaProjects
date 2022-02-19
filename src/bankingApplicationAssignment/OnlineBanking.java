@@ -2,11 +2,17 @@ package bankingApplicationAssignment;
 
 public class OnlineBanking extends BankingRules implements StandardProcess {
 
-	public Boolean validatePassword(String password) {
-		if (password.equals("unlockme")) {
+	public Boolean validatePassword(String password, String userName) {
+		if (password.equals("unlockme") && userName.equals("Thomas")) {
 			return true;
 		} else
 			return false;
+	}
+
+	@Override
+	void userIdentification() {
+		// TODO Auto-generated method stub
+
 	}
 
 	@Override
@@ -47,16 +53,8 @@ public class OnlineBanking extends BankingRules implements StandardProcess {
 	@Override
 	public void Investment(String plan, double balance) {
 		System.out.println("Your selected investment option is " + plan);
-		System.out.println("You have $" + balance + "in your account for making an Investment ");
+		System.out.println("You have $" + balance + " in your account for making an Investment ");
 		System.out.println("Please call our Financial Advisor on +1 888-915-5660 for further details");
-		
-	}
-
-	@Override
-	void userIdentification() {
-		// TODO Auto-generated method stub
-		
-	
 
 	}
 
