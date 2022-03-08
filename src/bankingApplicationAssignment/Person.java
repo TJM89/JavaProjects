@@ -6,6 +6,15 @@ public class Person {
 	private double totalFundAvail;
 	private String accountType;
 	private String currentPin;
+	private String newPassword;
+
+	public String getNewPassword() {
+		return newPassword;
+	}
+
+	public void setNewPassword(String newPassword) {
+		this.newPassword = newPassword;
+	}
 
 	String getCurrentPin() {
 		return currentPin;

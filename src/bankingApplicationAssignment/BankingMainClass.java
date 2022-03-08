@@ -51,8 +51,16 @@ public class BankingMainClass {
 						}
 						case 4: {
 							System.out.println("Enter the new pin : ");
-							person.setCurrentPin(sc.next());
-							atm.pinChange();
+							
+							String pinNew = sc.next();
+							if (pinNew.length()<4) {
+							System.out.println("Invalid pin numbers, enter a valid number");
+							}
+							else {
+								person.setCurrentPin(pinNew);
+								atm.pinChange();
+							}
+							
 
 							break;
 						}
@@ -65,7 +73,7 @@ public class BankingMainClass {
 						System.out.println(
 								"\nDo you want to perform another transaction?\nPress 1 to continue \nPress 0 to Exit");
 						opt = sc.nextInt();
-
+						
 					}
 					break;
 				}
@@ -99,6 +107,7 @@ public class BankingMainClass {
 						System.out.println("1. Fund Transfer");
 						System.out.println("2. Investment");
 						System.out.println("3. Check Balance");
+						System.out.println("4. Password change");
 
 						System.out.print("Choose the operation you would like to perform :");
 						int option = sc.nextInt();
@@ -137,6 +146,31 @@ public class BankingMainClass {
 							System.out.println("Balance Amount in your Account is : $ " + person.getTotalFundAvail());
 							break;
 						}
+						
+						case 4: {
+							System.out.println("Enter new passoword : " );
+							String newPassword = sc.next();
+							String specialValues = "&$@";
+							int count = 0;
+							for(int i = 0;i<newPassword.length();i++) {
+								char pass = newPassword.charAt(i);
+								if (specialValues.contains(Character.toString(pass))){
+									count++;
+								}
+							}
+							if (count == 0) {
+								person.setNewPassword(newPassword);
+								System.out.println("Password has been updated");
+							}
+							else {
+								System.out.println("Please enter a valid password");
+							}
+							
+							break;
+						}
+						
+						
+						
 						default: {
 							System.out.println("Invalid selection, please enter a valid option listed.");
 							break;

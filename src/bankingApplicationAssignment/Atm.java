@@ -15,7 +15,7 @@ public class Atm extends BankingRules implements StandardProcess {
 
 		double newBalance = balance + depositAmount;
 		System.out.println("\nYour Money has been successfully deposited\n");
-		System.out.println("\nBalance Amount in your Account is $ " + balance);
+		System.out.println("\nBalance Amount in your Account is $ " + newBalance);
 		return newBalance;
 	}
 
